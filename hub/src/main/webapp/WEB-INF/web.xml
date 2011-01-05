@@ -3,5 +3,54 @@
          xmlns="http://java.sun.com/xml/ns/j2ee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" >
+<servlet>
+	<servlet-name>HubServlet</servlet-name>
+	<servlet-class>com.thoughtworks.selenium.grid.hub.HubServlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>ConsoleServlet</servlet-name>
+	<servlet-class>com.thoughtworks.selenium.grid.hub.ConsoleServlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>RegistrationServlet</servlet-name>
+	<servlet-class>com.thoughtworks.selenium.grid.hub.RegistrationServlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>UnregistrationServlet</servlet-name>
+	<servlet-class>com.thoughtworks.selenium.grid.hub.UnregistrationServlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>LifecycleManagerServlet</servlet-name>
+	<servlet-class>com.thoughtworks.selenium.grid.hub.LifecycleManagerServlet</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>HeartbeatServlet</servlet-name>
+	<servlet-class>com.thoughtworks.selenium.grid.hub.HeartbeatServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>HubServlet</servlet-name>
+	<url-pattern>/selenium-server/driver/*</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>ConsoleServlet</servlet-name>
+	<url-pattern>/console</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>RegistrationServlet</servlet-name>
+	<url-pattern>/registration-manager/register</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>UnregistrationServlet</servlet-name>
+	<url-pattern>/registration-manager/unregister</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>LifecycleManagerServlet</servlet-name>
+	<url-pattern>/lifecycle-manager</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>HeartbeatServlet</servlet-name>
+	<url-pattern>/heartbeat</url-pattern>
+</servlet-mapping>
 
 </web-app>

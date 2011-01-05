@@ -3,7 +3,6 @@ package com.thoughtworks.selenium.grid.hub.remotecontrol;
 import com.thoughtworks.selenium.grid.HttpClient;
 import com.thoughtworks.selenium.grid.HttpParameters;
 import com.thoughtworks.selenium.grid.Response;
-import com.thoughtworks.selenium.grid.hub.HubServer;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -16,7 +15,7 @@ import java.util.Map;
  */
 public class RemoteControlProxy {
 
-    private static final Log LOGGER = LogFactory.getLog(HubServer.class);
+    private static final Log LOGGER = LogFactory.getLog(RemoteControlProxy.class);
 
     private static final int MAX_FAILED_HEARTBEATS = 3;
 

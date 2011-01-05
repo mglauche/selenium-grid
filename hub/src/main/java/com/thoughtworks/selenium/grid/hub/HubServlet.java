@@ -19,7 +19,7 @@ import java.io.IOException;
  */
 public class HubServlet extends HttpServlet {
 
-    private final static Log LOGGER = LogFactory.getLog(HubServer.class);
+    private final static Log LOGGER = LogFactory.getLog(HubServlet.class);
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
